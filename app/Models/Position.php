@@ -11,4 +11,9 @@ class Position extends Model
     use HasFactory;
 
     protected $fillable = ['position'];
+
+    public function joueur()
+    {
+        return $this->hasMany(Joueur::class);
+    }
 }
