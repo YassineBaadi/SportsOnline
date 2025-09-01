@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('ville');
             $table->string('pays');
             $table->string('image');
-            $table->foreignId('genre_id')->nullable()->constrained('genre')->nullOnDelete();
+            $table->foreignId('genre_id')->nullable()->constrained('genres')->nullOnDelete();
             $table->foreignId('continent_id')->nullable()->constrained('continents')->nullOnDelete();
             $table->timestamps();
         });
